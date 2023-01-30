@@ -18,14 +18,11 @@ planilha = openpyxl.load_workbook('importar-parceiro.xlsx')
 cadastro_parceiros_page = planilha['importar-parceiros']
 
 for x in range(3,5):
-    for y in range (1, 11):
-        cadastro = gerarlistaCadastroCamposObrigatorios()
-        caminho = dados["simplifique"]["clientes"]["campos"]
-        for i in caminho:
-            if(i["obrigatorio"] == False):
-                cadastro_parceiros_page.cell(row = x, column = y, value = "teste")
-            else:
-                print("entrei aqui como true")
-
-
+    cadastro = gerarlistaCadastroCamposObrigatorios()
+    campos = dados["simplifique"]["clientes"]["campos"]
+    for y, campo in [(y + 1, campo) for (y, campo) in enumerate(campos)]:         
+        if campo["obrigatorio"]:
+            cadastro_parceiros_page.cell(row = x, column = y, value = cadastro[y])
+        else:
+            cadastro_parceiros_page.cell(row = x, column = y, value = "")
 planilha.save('importar-parceiros-teste.xlsx')

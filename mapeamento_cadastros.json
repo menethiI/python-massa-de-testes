@@ -124,7 +124,7 @@
                 },
                 {
                     "cabecalho": "Município",
-                    "algoritmo": "generate_municpicio",
+                    "algoritmo": "generate_municipio",
                     "obrigatorio": false
                 },
                 {
