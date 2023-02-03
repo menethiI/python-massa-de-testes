@@ -1,0 +1,76 @@
+{
+    "simplifique":{
+        "clientes": {
+            "campos": [
+                {    
+                    "cabecalho": "Documento de Identificação",
+                    "algoritmo": "generate_documentoIdentificacao",
+                    "obrigatorio": true
+                },
+                {
+                    "cabecalho": "Razão social/nome",
+                    "algoritmo": "generate_razaoSocialNome",
+                    "obrigatorio": true
+                },
+                {
+                    "cabecalho": "Nome Fantasia",
+                    "algoritmo": "generate_nomeFantasia",
+                    "obrigatorio": true
+                },
+                {
+                    "cabecalho": "CNAE Principal",
+                    "algoritmo": "generate_CNAE",
+                    "obrigatorio": true
+                },
+                {
+                    "cabecalho": "CPF/CNPJ contato",
+                    "algoritmo": "generate_documento",
+                    "obrigatorio": true
+                },
+            ]
+        }
+    }
+}
+
+{
+    "simplifique":{
+        "clientes": {
+            "campos": [
+                {    
+                    "cabecalho": "Documento de Identificação",
+                    "algoritmo": "generate_documentoIdentificacao",
+                    "obrigatorio": true
+                },
+                {
+                    "cabecalho": "Razão social/nome",
+                    "algoritmo": "generate_razaoSocialNome",
+                    "obrigatorio": true
+                },
+                {
+                    "cabecalho": "Data de aniversário",
+                    "algoritmo": "generate_dataAniversario",
+                    "obrigatorio": true
+                },
+                {
+                    "cabecalho": "CPF/CNPJ contato",
+                    "algoritmo": "generate_documento",
+                    "obrigatorio": true
+                },
+            ]
+        }
+    }
+}
+
+{
+    "simplifique":{
+        "clientes": {
+            "campos": [
+            {
+                "cabecalho": "Inscrição Estadual",
+                "algoritmo": "generate_inscricaoEstadual",
+                "obrigatorio": true
+            }
+            ]
+        }
+    }
+}
