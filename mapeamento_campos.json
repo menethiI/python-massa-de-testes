@@ -75,5 +75,34 @@
                 ]
             }
         }
+    },
+
+    {
+        "simplifique":{
+            "clientes": {
+                "campos": [
+                {
+                    "cabecalho": "Nome do Contato",
+                    "algoritmo": "generate_nome",
+                    "obrigatorio": true
+                }, 
+                {
+                    "cabecalho": "Tipo de telefone",
+                    "algoritmo": "generate_tipoTelefone",
+                    "obrigatorio": true
+                },
+                {
+                    "cabecalho": "Telefone de contato",
+                    "algoritmo": "generate_telefone",
+                    "obrigatorio": true
+                },
+                {
+                    "cabecalho": "E-mail de contato",
+                    "algoritmo": "generate_email",
+                    "obrigatorio": true
+                }
+                ]
+            }
+        }
     }
 ]
