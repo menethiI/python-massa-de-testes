@@ -55,26 +55,11 @@
                 {
                     "cabecalho": "Inscrição Estadual",
                     "algoritmo": "generate_inscricaoEstadual",
-                    "obrigatorio": true
+                    "obrigatorio": false
                 },
                 {
                     "cabecalho": "SUFRAMA",
                     "algoritmo": "generate_SUFRAMA",
-                    "obrigatorio": false
-                },
-                {
-                    "cabecalho": "Nome do Contato",
-                    "algoritmo": "generate_nome",
-                    "obrigatorio": false
-                }, 
-                {
-                    "cabecalho": "CPF/CNPJ contato",
-                    "algoritmo": "generate_documento",
-                    "obrigatorio": false
-                },
-                {
-                    "cabecalho": "Área responsável",
-                    "algoritmo": "generate_areaResponsavel",
                     "obrigatorio": false
                 },
                 {
@@ -83,7 +68,22 @@
                     "obrigatorio": false
                 },
                 {
-                    "cabecalho": "Tipo de telefone",
+                    "cabecalho": "Nome do Contato",
+                    "algoritmo": "generate_nome",
+                    "obrigatorio": false
+                }, 
+                {
+                    "cabecalho": "CPF/CNPJ",
+                    "algoritmo": "generate_documento",
+                    "obrigatorio": false
+                },
+                {
+                    "cabecalho": "Área Responsável",
+                    "algoritmo": "generate_areaResponsavel",
+                    "obrigatorio": false
+                },
+                {
+                    "cabecalho": "Tipo de Telefone",
                     "algoritmo": "generate_tipoTelefone",
                     "obrigatorio": false
                 },
@@ -149,7 +149,7 @@
                 {
                     "cabecalho": "Status",
                     "algoritmo": "generate_status",
-                    "obrigatorio": false
+                    "obrigatorio": true
                 },
                 {
                     "cabecalho": "Tipo de cadastro",
@@ -243,7 +243,7 @@
                 },
                 {
                     "cabecalho": "Tipo de Endereço",
-                    "algoritmo": "generate_tipoEnderço",
+                    "algoritmo": "generate_tipoEndereco",
                     "obrigatorio": false
                 },
                 {

@@ -1,108 +1,117 @@
 
-[
-    {
-        "simplifique":{
-            "clientes": {
+{
+    "simplifique":{
+        "parceiros": {
+            "camposPrioritarios": [
+                {
+                    "cabecalho": "Perfil do Parceiro",
+                    "algoritmo": "generate_perfilParceiro"
+                },
+                {
+                    "cabecalho": "Tipo de Inscrição Estadual",
+                    "algoritmo": "generate_tipoInscricaoEstadual"
+                },
+                {
+                    "cabecalho": "Recebe XML",
+                    "algoritmo": "generate_recebeXML"  
+                },
+                {
+                    "cabecalho": "CEP",
+                    "algoritmo": "generate_CEP"
+                }
+            ],
+            "pessoaJuridica":{
                 "campos": [
                     {    
                         "cabecalho": "Documento de Identificação",
-                        "algoritmo": "generate_documentoIdentificacao",
-                        "obrigatorio": true
+                        "algoritmo": "generate_documentoIdentificacao"
                     },
                     {
                         "cabecalho": "Razão social/nome",
-                        "algoritmo": "generate_razaoSocialNome",
-                        "obrigatorio": true
+                        "algoritmo": "generate_razaoSocialNome"
                     },
                     {
                         "cabecalho": "Nome Fantasia",
-                        "algoritmo": "generate_nomeFantasia",
-                        "obrigatorio": true
+                        "algoritmo": "generate_nomeFantasia"
                     },
                     {
                         "cabecalho": "CNAE Principal",
-                        "algoritmo": "generate_CNAE",
-                        "obrigatorio": true
+                        "algoritmo": "generate_CNAE"
                     },
                     {
                         "cabecalho": "CPF/CNPJ contato",
-                        "algoritmo": "generate_documento",
-                        "obrigatorio": true
+                        "algoritmo": "generate_documento"
                     }
                 ]
-            }
-        }
-    },
-
-    {
-        "simplifique":{
-            "clientes": {
+            },
+            "pessoaFisica":{
                 "campos": [
                     {    
                         "cabecalho": "Documento de Identificação",
-                        "algoritmo": "generate_documentoIdentificacao",
-                        "obrigatorio": true
+                        "algoritmo": "generate_documentoIdentificacao"
                     },
                     {
                         "cabecalho": "Razão social/nome",
-                        "algoritmo": "generate_razaoSocialNome",
-                        "obrigatorio": true
+                        "algoritmo": "generate_razaoSocialNome"
                     },
                     {
                         "cabecalho": "Data de aniversário",
-                        "algoritmo": "generate_dataAniversario",
-                        "obrigatorio": true
+                        "algoritmo": "generate_dataAniversario"
                     },
                     {
                         "cabecalho": "CPF/CNPJ contato",
-                        "algoritmo": "generate_documento",
-                        "obrigatorio": true
+                        "algoritmo": "generate_documento"
                     }
                 ]
-            }
-        }
-    },
-
-    {
-        "simplifique":{
-            "clientes": {
+            },
+            "contribuinte":{
                 "campos": [
-                {
-                    "cabecalho": "Inscrição Estadual",
-                    "algoritmo": "generate_inscricaoEstadual",
-                    "obrigatorio": true
-                }
+                    {
+                        "cabecalho": "Inscrição Estadual",
+                        "algoritmo": "generate_inscricaoEstadual"
+                    }
                 ]
-            }
-        }
-    },
-
-    {
-        "simplifique":{
-            "clientes": {
+            },
+            "recebeXML":{
                 "campos": [
-                {
-                    "cabecalho": "Nome do Contato",
-                    "algoritmo": "generate_nome",
-                    "obrigatorio": true
-                }, 
-                {
-                    "cabecalho": "Tipo de telefone",
-                    "algoritmo": "generate_tipoTelefone",
-                    "obrigatorio": true
-                },
-                {
-                    "cabecalho": "Telefone de contato",
-                    "algoritmo": "generate_telefone",
-                    "obrigatorio": true
-                },
-                {
-                    "cabecalho": "E-mail de contato",
-                    "algoritmo": "generate_email",
-                    "obrigatorio": true
-                }
+                    {
+                        "cabecalho": "Nome do Contato",
+                        "algoritmo": "generate_nome"
+                    }, 
+                    {
+                        "cabecalho": "Tipo de telefone",
+                        "algoritmo": "generate_tipoTelefone"
+                    },
+                    {
+                        "cabecalho": "Telefone de contato",
+                        "algoritmo": "generate_telefone"
+                    },
+                    {
+                        "cabecalho": "E-mail de contato",
+                        "algoritmo": "generate_email"
+                    }
+                ]
+            },
+            "cep":{
+                "campos":[
+                    {
+                        "cabecalho": "Tipo de Endereço",
+                        "algoritmo": "generate_tipoEndereco"
+                    },
+                    {
+                        "cabecalho": "Logradouro",
+                        "algoritmo": "generate_logradouro"
+                    },
+                    {
+                        "cabecalho": "Número",
+                        "algoritmo": "generate_numeroImovel"
+                    },
+                    {
+                        "cabecalho": "Bairro",
+                        "algoritmo": "generate_bairro"
+                    }
                 ]
             }
         }
     }
-]
+}    
