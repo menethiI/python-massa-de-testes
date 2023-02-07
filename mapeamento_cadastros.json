@@ -422,7 +422,7 @@
                 },
                 {
                     "cabecalho": "Fornecedor",
-                    "algoritmo": "generate_nome",
+                    "algoritmo": "generate_documentoIdentificacao",
                     "obrigatorio": false
                 }
             ]

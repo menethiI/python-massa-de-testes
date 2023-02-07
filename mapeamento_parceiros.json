@@ -18,6 +18,24 @@
                 {
                     "cabecalho": "CEP",
                     "algoritmo": "generate_CEP"
+                },
+                {
+                    "cabecalho": "UF",
+                    "algoritmo": "generate_UF"
+                }
+            ],
+            "camposOpcionais":[
+                {
+                    "cabecalho": "Inscrição Municipal",
+                    "algoritmo": "generate_inscricaoMunicipal"
+                },
+                {
+                    "cabecalho": "Área Responsável",
+                    "algoritmo": "generate_areaResponsavel"
+                },
+                {
+                    "cabecalho": "Complemento",
+                    "algoritmo": "generate_complemento"    
                 }
             ],
             "pessoaJuridica":{
@@ -64,6 +82,18 @@
                     }
                 ]
             },
+            "estrangeiro":{
+                "campos":[
+                    {    
+                        "cabecalho": "Documento de Identificação",
+                        "algoritmo": "generate_documentoIdentificacao"
+                    },
+                    {
+                        "cabecalho": "Razão social/nome",
+                        "algoritmo": "generate_razaoSocialNome"
+                    }
+                ]
+            },
             "contribuinte":{
                 "campos": [
                     {
@@ -107,10 +137,22 @@
                         "algoritmo": "generate_numeroImovel"
                     },
                     {
+                        "cabecalho": "Município",
+                        "algoritmo": "generate_municipio"
+                    },
+                    {
                         "cabecalho": "Bairro",
                         "algoritmo": "generate_bairro"
+                    },
+                    {
+                        "cabecalho": "País",
+                        "algoritmo": "generate_pais"
                     }
                 ]
+            },
+            "uf":{
+                "cabecalho": "SUFRAMA",
+                "algoritmo": "generate_SUFRAMA"
             }
         }
     }
