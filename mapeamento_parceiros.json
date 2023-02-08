@@ -4,7 +4,7 @@
         "parceiros": {
             "camposPrioritarios": [
                 {
-                    "cabecalho": "Perfil do Parceiro",
+                    "cabecalho": "Perfil do parceiro",
                     "algoritmo": "generate_perfilParceiro"
                 },
                 {

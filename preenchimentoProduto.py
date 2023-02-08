@@ -10,7 +10,7 @@ with open("mapeamento_cadastros.json", 'r', encoding='utf-8') as mapeamento_json
     dados = json.load(mapeamento_json)
 
 def gerarlistaCadastroCamposObrigatorios():
-    listaCadastroObrigatorio = [ '00', "Ativo", generate_codigoProduto(), generate_nomeProduto(), generate_codigoBarras(), generate_precoVenda(), generate_marca(), generate_peso(), generate_unidadeMedida()]
+    listaCadastroObrigatorio = [ '00', "Ativo", generate_codigoProduto(), generate_nomeProduto(), generate_codigoBarras(), generate_precoVenda(), generate_marca(), generate_peso(), generate_peso(), generate_unidadeMedida()]
     return listaCadastroObrigatorio
 
 planilha = openpyxl.load_workbook('planilhas/importar-produto.xlsx')

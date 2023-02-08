@@ -123,6 +123,6 @@ def generate_bairro():
 
 # %%
 def generate_UF():
-    return fake.administrative_unit()
+    return fake.estado_sigla() 
 
 

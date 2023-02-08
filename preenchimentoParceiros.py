@@ -17,7 +17,7 @@ planilha = openpyxl.load_workbook('planilhas/importar-parceiro.xlsx')
 
 cadastro_parceiros_page = planilha['importar-parceiros']
 
-for x in range(3,7):
+for x in range(3,4):
     cadastro = gerarlistaCadastroCamposObrigatorios()
     campos = dados["simplifique"]["clientes"]["campos"]
     for y, campo in [(y + 1, campo) for (y, campo) in enumerate(campos)]:         
