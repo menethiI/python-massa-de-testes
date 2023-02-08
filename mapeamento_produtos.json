@@ -16,7 +16,13 @@
                 },
                 {
                     "cabecalho": "Atributo",
-                    "algoritmo": "generate_atributo"
+                    "algoritmo": "generate_atributo",
+                    "campos": [
+                        {
+                            "cabecalho": "Valor do Atributo",
+                            "algoritmo": "generate_valorAtributo"
+                        }
+                    ]
                 }
             ],
             "camposComDependencias":[
@@ -105,12 +111,6 @@
                 {
                     "cabecalho": "Código benefício UF",
                     "algoritmo": "generate_codigoBeneficioUF"
-                }
-            ],
-            "atributo":[
-                {
-                    "cabecalho": "Valor do Atributo",
-                    "algoritmo": "generate_valorAtributo"
                 }
             ]
         }

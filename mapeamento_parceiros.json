@@ -5,23 +5,105 @@
             "camposPrioritarios": [
                 {
                     "cabecalho": "Perfil do parceiro",
-                    "algoritmo": "generate_perfilParceiro"
+                    "algoritmo": "generate_perfilParceiro",
+                    "campos":[
+                        {    
+                            "cabecalho": "Documento de Identificação",
+                            "algoritmo": "generate_documentoIdentificacao"
+                        },
+                        {
+                            "cabecalho": "Razão social/nome",
+                            "algoritmo": "generate_razaoSocialNome"
+                        },
+                        {
+                            "cabecalho": "Nome Fantasia",
+                            "algoritmo": "generate_nomeFantasia"
+                        },
+                        {
+                            "cabecalho": "CNAE Principal",
+                            "algoritmo": "generate_CNAE"
+                        },
+                        {
+                            "cabecalho": "CPF/CNPJ contato",
+                            "algoritmo": "generate_documento"
+                        },
+                        {
+                            "cabecalho": "Data de aniversário",
+                            "algoritmo": "generate_dataAniversario"
+                        }
+                    ]
                 },
                 {
                     "cabecalho": "Tipo de Inscrição Estadual",
-                    "algoritmo": "generate_tipoInscricaoEstadual"
+                    "algoritmo": "generate_tipoInscricaoEstadual",
+                    "campos": [
+                        {
+                            "cabecalho": "Inscrição Estadual",
+                            "algoritmo": "generate_inscricaoEstadual"
+                        }
+                    ]    
                 },
                 {
                     "cabecalho": "Recebe XML",
-                    "algoritmo": "generate_recebeXML"  
+                    "algoritmo": "generate_recebeXML",
+                    "campos": [
+                        {
+                            "cabecalho": "Nome do Contato",
+                            "algoritmo": "generate_nome"
+                        }, 
+                        {
+                            "cabecalho": "Tipo de telefone",
+                            "algoritmo": "generate_tipoTelefone"
+                        },
+                        {
+                            "cabecalho": "Telefone de contato",
+                            "algoritmo": "generate_telefone"
+                        },
+                        {
+                            "cabecalho": "E-mail de contato",
+                            "algoritmo": "generate_email"
+                        }
+                    ]  
                 },
                 {
                     "cabecalho": "CEP",
-                    "algoritmo": "generate_CEP"
+                    "algoritmo": "generate_CEP",
+                    "campos":[
+                        {
+                            "cabecalho": "Tipo de Endereço",
+                            "algoritmo": "generate_tipoEndereco"
+                        },
+                        {
+                            "cabecalho": "Logradouro",
+                            "algoritmo": "generate_logradouro"
+                        },
+                        {
+                            "cabecalho": "Número",
+                            "algoritmo": "generate_numeroImovel"
+                        },
+                        {
+                            "cabecalho": "Município",
+                            "algoritmo": "generate_municipio"
+                        },
+                        {
+                            "cabecalho": "Bairro",
+                            "algoritmo": "generate_bairro"
+                        },
+                        {
+                            "cabecalho": "País",
+                            "algoritmo": "generate_pais"
+                        }
+                    ]
                 },
                 {
                     "cabecalho": "UF",
-                    "algoritmo": "generate_UF"
+                    "algoritmo": "generate_UF",
+                    "campos": [
+                        {
+                            "cabecalho": "SUFRAMA",
+                            "algoritmo": "generate_SUFRAMA"
+                        }
+                    ]
                 }
             ],
             "camposOpcionais":[
@@ -37,123 +119,7 @@
                     "cabecalho": "Complemento",
                     "algoritmo": "generate_complemento"    
                 }
-            ],
-            "pessoaJuridica":{
-                "campos": [
-                    {    
-                        "cabecalho": "Documento de Identificação",
-                        "algoritmo": "generate_documentoIdentificacao"
-                    },
-                    {
-                        "cabecalho": "Razão social/nome",
-                        "algoritmo": "generate_razaoSocialNome"
-                    },
-                    {
-                        "cabecalho": "Nome Fantasia",
-                        "algoritmo": "generate_nomeFantasia"
-                    },
-                    {
-                        "cabecalho": "CNAE Principal",
-                        "algoritmo": "generate_CNAE"
-                    },
-                    {
-                        "cabecalho": "CPF/CNPJ contato",
-                        "algoritmo": "generate_documento"
-                    }
-                ]
-            },
-            "pessoaFisica":{
-                "campos": [
-                    {    
-                        "cabecalho": "Documento de Identificação",
-                        "algoritmo": "generate_documentoIdentificacao"
-                    },
-                    {
-                        "cabecalho": "Razão social/nome",
-                        "algoritmo": "generate_razaoSocialNome"
-                    },
-                    {
-                        "cabecalho": "Data de aniversário",
-                        "algoritmo": "generate_dataAniversario"
-                    },
-                    {
-                        "cabecalho": "CPF/CNPJ contato",
-                        "algoritmo": "generate_documento"
-                    }
-                ]
-            },
-            "estrangeiro":{
-                "campos":[
-                    {    
-                        "cabecalho": "Documento de Identificação",
-                        "algoritmo": "generate_documentoIdentificacao"
-                    },
-                    {
-                        "cabecalho": "Razão social/nome",
-                        "algoritmo": "generate_razaoSocialNome"
-                    }
-                ]
-            },
-            "contribuinte":{
-                "campos": [
-                    {
-                        "cabecalho": "Inscrição Estadual",
-                        "algoritmo": "generate_inscricaoEstadual"
-                    }
-                ]
-            },
-            "recebeXML":{
-                "campos": [
-                    {
-                        "cabecalho": "Nome do Contato",
-                        "algoritmo": "generate_nome"
-                    }, 
-                    {
-                        "cabecalho": "Tipo de telefone",
-                        "algoritmo": "generate_tipoTelefone"
-                    },
-                    {
-                        "cabecalho": "Telefone de contato",
-                        "algoritmo": "generate_telefone"
-                    },
-                    {
-                        "cabecalho": "E-mail de contato",
-                        "algoritmo": "generate_email"
-                    }
-                ]
-            },
-            "cep":{
-                "campos":[
-                    {
-                        "cabecalho": "Tipo de Endereço",
-                        "algoritmo": "generate_tipoEndereco"
-                    },
-                    {
-                        "cabecalho": "Logradouro",
-                        "algoritmo": "generate_logradouro"
-                    },
-                    {
-                        "cabecalho": "Número",
-                        "algoritmo": "generate_numeroImovel"
-                    },
-                    {
-                        "cabecalho": "Município",
-                        "algoritmo": "generate_municipio"
-                    },
-                    {
-                        "cabecalho": "Bairro",
-                        "algoritmo": "generate_bairro"
-                    },
-                    {
-                        "cabecalho": "País",
-                        "algoritmo": "generate_pais"
-                    }
-                ]
-            },
-            "uf":{
-                "cabecalho": "SUFRAMA",
-                "algoritmo": "generate_SUFRAMA"
-            }
+            ]
         }
     }
 }    
