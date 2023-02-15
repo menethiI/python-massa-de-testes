@@ -25,16 +25,6 @@
                     ]
                 }
             ],
-            "camposComDependencias":[
-                {
-                    "cabecalho": "Código Tributação",
-                    "algoritmo": "generate_codigoTributacao"
-                },
-                {
-                    "cabecalho": "Fornecedor",
-                    "algoritmo": "generate_documentoIdentificacao"
-                }
-            ],
             "camposOpcionais":[
                 {
                     "cabecalho": "Código de Barras",
@@ -111,6 +101,14 @@
                 {
                     "cabecalho": "Código benefício UF",
                     "algoritmo": "generate_codigoBeneficioUF"
+                },
+                {
+                    "cabecalho": "Código Tributação",
+                    "algoritmo": "generate_codigoTributacao"
+                },
+                {
+                    "cabecalho": "Fornecedor",
+                    "algoritmo": "generate_documentoIdentificacao"
                 }
             ]
         }
