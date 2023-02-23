@@ -12,7 +12,7 @@ fake = Faker(locales)
 status = ['Ativo', 'Inativo']
 origem = ['0 - Nacional: exceto as indicadas nos códigos 3, 4, 5 e 8', '1 - Estrangeira: importação direta, exceto a indicada no código 6', '2 - Estrangeira: adquirida no mercado interno, exceto a indicada no código 7', '3 - Nacional: mercadoria ou bem com Conteúdo de Importação superior a 40% e inferior ou igual a 70%', '4 - Nacional: produção em conformidade com processos básicos tratados na legislação dos Ajustes', '5 - Nacional: mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40%', '6 - Estrangeira: importação direta, sem similar nacional, constante em lista da CAMEX', '7 - Estrangeira: adquirida no mercado interno, sem similar nacional, constante em lista da CAMEX', '8 - Nacional: mercadoria ou bem com Conteúdo de Importação superior a 70%']
 tipoProduto = ['00 - Mercadoria para Revenda', '01 - Matéria Prima', '02 - Embalagens', '03 - Produto em Processo', '04 - Produto Acabado', '05 - Subproduto', '06 - Produto Intermediário', '07 - Material de uso e consumo', '08 - Ativo Imobilizado', '10 - Outros Insumos', '99 - Outros']
-unidadeMedida = ['Ampola','Balde','Barra','Bobina','Bloco']
+unidadeMedida = ['BALDE', 'BANDEJA', 'BOMB', 'CAPS', 'CART', 'CENTO', 'CJ', 'CM', 'LATA']
 ncm = ['01012100','02011000', '12116000', '55094200', '90302010']
 cest = ['0100100', '0200100', '0300100', '0400100', '2899900']
 
@@ -76,7 +76,6 @@ def generate_aliquotaTributosEstadual():
 
 def generate_CEST():
     return random.choice(cest)
-
 
 def generate_codigoTributacao():
     return fake.pyint()

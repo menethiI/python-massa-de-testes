@@ -24,7 +24,7 @@
                 },
                 {
                     "cabecalho": "Razão social/nome",
-                    "algoritmo": "generate_razaoSocialNome",
+                    "algoritmo": "generate_razaoSocial_or_name",
                     "obrigatorio": true
                 },
                 {
@@ -168,7 +168,7 @@
                 },
                 {
                     "cabecalho": "Razão social/nome",
-                    "algoritmo": "generate_razaoSocialNome",
+                    "algoritmo": "generate_razaoSocial_or_name",
                     "obrigatorio": true
                 },
                 {
@@ -199,7 +199,7 @@
                 {
                     "cabecalho": "Inscrição Estadual",
                     "algoritmo": "generate_inscricaoEstadual",
-                    "obrigatorio": false
+                    "obrigatorio": true
                 },
                 {
                     "cabecalho": "SUFRAMA",
