@@ -1,0 +1,116 @@
+{
+    "simplifique":{
+        "produtos": {
+            "camposPrioritarios": [
+                {
+                    "cabecalho": "Código do Produto",
+                    "algoritmo": "generate_codigoProduto"
+                },
+                {
+                    "cabecalho": "Nome",
+                    "algoritmo": "generate_nomeProduto"
+                },
+                {
+                    "cabecalho": "Unidade de Medida",
+                    "algoritmo": "generate_unidadeMedida"
+                },
+                {
+                    "cabecalho": "Atributo",
+                    "algoritmo": "generate_atributo",
+                    "campos": [
+                        {
+                            "cabecalho": "Valor do Atributo",
+                            "algoritmo": "generate_valorAtributo"
+                        }
+                    ]
+                }
+            ],
+            "camposOpcionais":[
+                {
+                    "cabecalho": "Código de Barras",
+                    "algoritmo": "generate_codigoBarras"
+                },
+                {
+                    "cabecalho": "Preço de Venda",
+                    "algoritmo": "generate_precoVenda"
+                },
+                {
+                    "cabecalho": "Marca",
+                    "algoritmo": "generate_marca"
+                },
+                {
+                    "cabecalho": "Peso Líquido",
+                    "algoritmo": "generate_peso"
+                },
+                {
+                    "cabecalho": "Peso Bruto",
+                    "algoritmo": "generate_peso"
+                },  
+                {
+                    "cabecalho": "Grupo",
+                    "algoritmo": "generate_grupo"
+                },
+                {
+                    "cabecalho": "Informações Adicionais",
+                    "algoritmo": "generate_informacoesAdicionais"
+                },
+                {
+                    "cabecalho": "Estoque Mínimo",
+                    "algoritmo": "generate_estoqueMinimo"
+                },
+                {
+                    "cabecalho": "Estoque Máximo",
+                    "algoritmo": "generate_estoque"
+                },
+                {
+                    "cabecalho": "Estoque Disponível",
+                    "algoritmo": "generate_estoque"
+                },
+                {
+                    "cabecalho": "Origem",
+                    "algoritmo": "generate_origem"
+                },
+                {
+                    "cabecalho": "Tipo do Produto",
+                    "algoritmo": "generate_tipoProduto"
+                },
+                {
+                    "cabecalho": "NCM",
+                    "algoritmo": "generate_NCM"
+                },
+                {
+                    "cabecalho": "Ex TIPI",
+                    "algoritmo": "generate_exTipi"
+                },
+                {
+                    "cabecalho": "Nº controle de FCI",
+                    "algoritmo": "generate_controleFCI"
+                },
+                {
+                    "cabecalho": "Alíquota tributos federal",
+                    "algoritmo": "generate_aliquotaTributosFederal"
+                },
+                {
+                    "cabecalho": "Alíquota tributos estadual",
+                    "algoritmo": "generate_aliquotaTributosEstadual"
+                },
+                {
+                    "cabecalho": "CEST",
+                    "algoritmo": "generate_CEST"
+                },
+                {
+                    "cabecalho": "Código benefício UF",
+                    "algoritmo": "generate_codigoBeneficioUF"
+                },
+                {
+                    "cabecalho": "Código Tributação",
+                    "algoritmo": "generate_codigoTributacao"
+                },
+                {
+                    "cabecalho": "Fornecedor",
+                    "algoritmo": "generate_documentoIdentificacao"
+                }
+            ]
+        }
+    }
+}
