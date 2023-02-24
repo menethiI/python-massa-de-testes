@@ -421,7 +421,7 @@
                 },
                 {
                     "cabecalho": "Fornecedor",
-                    "algoritmo": "generate_nome",
+                    "algoritmo": "generate_fornecedor",
                     "obrigatorio": false
                 }
             ]

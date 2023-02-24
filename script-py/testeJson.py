@@ -1,6 +1,6 @@
 import json
 import random
-from funcoes import *
+from funcoesParceiro import *
 
 with open("script-py/mapeamento_cadastros.json", encoding='utf-8') as meu_json:
     dados = json.load(meu_json)
@@ -14,10 +14,3 @@ for campo in camposPrioritarios:
     print(campo["campos"])
     if "Documento de Identificação" in campo["campos"]:
         print("simm")
-
-
-# def listaId(id):
-#     for item in lista:
-#         return item if item["id"] == id else ""
-
-# print(listaId("Parceiro")["campos"])

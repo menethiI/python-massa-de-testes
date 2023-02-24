@@ -1,23 +1,27 @@
 import openpyxl
 import json
 from faker import Faker
-from funcoes import *
+from funcoesParceiro import *
 
 # main(projName, TelaCadastro, quantidadeCadastros, contmaticID)
 
-planilha = openpyxl.load_workbook('excel/planilhas/importar-parceiro.xlsx')
-paginaParceiro = planilha['importar-parceiros']
+planilhaParceiro = openpyxl.load_workbook('excel/planilhas/importar-parceiro.xlsx')
+paginaParceiro = planilhaParceiro['importar-parceiros']
 
+planilhaPRD = openpyxl.load_workbook('excel/planilhas/importar-produto.xlsx')
+paginaPRD = planilhaPRD['importar-produtos']
 
 with open("script-py/mapeamento_cadastros.json", encoding='utf-8') as meu_json:
     dadosJson = json.load(meu_json)
 
-camposPlanilha = dadosJson["simplifique"]["clientes"]["campos"]
+camposParceiros = dadosJson["simplifique"]["clientes"]["campos"]
+camposPRD = dadosJson["simplifique"]["produtos"]["campos"]
+
 
 def preencherPlanilhaCamposObrigatorios(argQuantidadeCadastro):
     for linhaPlanilha in range (POSICAO_PRIMEIRA_LINHA_PREENCHIMENTO, calcQuantidadeCadastro(argQuantidadeCadastro) ):
         infDadoCriado = {}
-        for colunaPlanilha, campo in [(y + 1, campo) for (y, campo) in enumerate(camposPlanilha)]:
+        for colunaPlanilha, campo in [(y + 1, campo) for (y, campo) in enumerate(camposParceiros)]:
             if campo["obrigatorio"]:
                 paginaParceiro.cell(row = linhaPlanilha, column = colunaPlanilha , value = checkValor(infDadoCriado, campo['algoritmo'], campo['cabecalho']))
             else:
@@ -26,8 +30,8 @@ def preencherPlanilhaCamposObrigatorios(argQuantidadeCadastro):
 def preencherPlanilhaTodosCampos(argQuantidadeCadastro): 
     for linhaPlanilha in range (POSICAO_PRIMEIRA_LINHA_PREENCHIMENTO, calcQuantidadeCadastro(argQuantidadeCadastro) ):
         infDadoCriado = {}
-        for colunaPlanilha, campo in [(y + 1, campo) for (y, campo) in enumerate(camposPlanilha)]:
+        for colunaPlanilha, campo in [(y + 1, campo) for (y, campo) in enumerate(camposParceiros)]:
             paginaParceiro.cell(row = linhaPlanilha, column = colunaPlanilha , value = checkValor(infDadoCriado, campo['algoritmo'],  campo['cabecalho']))
 
-preencherPlanilhaCamposObrigatorios(15)
-planilha.save('excel/planilhasGerada/importar-parceiros-teste3.xlsx')
+preencherPlanilhaTodosCampos(5)
+planilhaParceiro.save('excel/planilhasGerada/importar-parceiros-teste.xlsx')

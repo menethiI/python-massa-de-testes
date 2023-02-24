@@ -2,93 +2,98 @@ import json
 from faker import Faker
 import random
 import string
+from funcoesProduto import *
 from listaValoresPreenchimento import *
-from validate_docbr import CPF
-from validate_docbr import CNPJ
 
 locales = 'pt-BR'
 fake = Faker(locales)
-cpf = CPF()
-cnpj = CNPJ()
 
 POSICAO_PRIMEIRA_LINHA_PREENCHIMENTO = 3
 valorPreenchido = ""
+
+documentosCadastrados = listDocumentDataBase()
 
 with open("script-py/mapeamento_campos.json", encoding='utf-8') as meu_json:
     dadosJsonCampos = json.load(meu_json)
 
 camposPrioritarios = dadosJsonCampos["simplifique"]["parceiros"]["camposPrioritarios"]
 
-
 def checkValor(infDadoCriado, campoAlgoritmo, campoCabecalho):
     valor = eval(f'{campoAlgoritmo}({checkInfDadoCriado(infDadoCriado, campoCabecalho, valorPreenchido)})')
-    checkCamposPrioritario(infDadoCriado, campoCabecalho, valor)
+    checkCampoPrioritario(infDadoCriado, campoCabecalho, valor)
     return valor
 
 
 def checkInfDadoCriado(infDadoCriado, campoCabecalho, valorPreenchido):
-    campoPrioritario = checkCamposValidar(campoCabecalho)
+    campoPrioritario = checkCampoValidar(campoCabecalho)
     if campoPrioritario:
         valorPreenchido = f"'{infDadoCriado[campoPrioritario]}'"
     return valorPreenchido
 
 
-def checkCamposValidar(campoCabecalho):
-    for campoValidar in camposPrioritarios:
-        for campo in campoValidar["campos"]:
-            if campoCabecalho in campo["cabecalho"]:
-                return campoValidar['cabecalho']
+def checkCampoValidar(campoCabecalho):
+    for campoPrioritario in camposPrioritarios:
+        for campoValidar in campoPrioritario["campos"]:
+            if campoCabecalho in campoValidar["cabecalho"]:
+                return campoPrioritario['cabecalho']
     return None
 
-def checkCamposPrioritario(infDadoCriado, campoCabecalho, valor):
+
+def checkCampoPrioritario(infDadoCriado, campoCabecalho, valor):
     for campo in camposPrioritarios:
         if campoCabecalho in campo["cabecalho"]:
             infDadoCriado[campoCabecalho] = valor
 
+
 def calcQuantidadeCadastro(argQuantidadeCadastro):
     return POSICAO_PRIMEIRA_LINHA_PREENCHIMENTO + argQuantidadeCadastro
 
+
 def checkTipoPessoa(tipoPessoa):
-    if tipoPessoa == "Pessoa Física":     
+    if tipoPessoa == "Pessoa Física":
         return generateDocumentCPF()
-    if tipoPessoa == "Pessoa Jurídica":       
+    if tipoPessoa == "Pessoa Jurídica":
         return generateDocumentCNPJ()
     if tipoPessoa == "Estrangeiro":
         return fake.ssn()
 
+
 def generateDocumentCPF():
     cpf = fake.cpf()
-    while cpf in generateDocumentCPF.generatedCPFs:
+    while cpf in documentosCadastrados:
         cpf = fake.cpf()
-    generateDocumentCPF.generatedCPFs.append(cpf)
+    documentosCadastrados.add(cpf)
     return cpf
-generateDocumentCPF.generatedCPFs = []
 
 def generateDocumentCNPJ():
     cnpj = fake.cnpj()
-    while cnpj in generateDocumentCNPJ.generatedCNPJs:
+    while cnpj in documentosCadastrados:
         cnpj = fake.cnpj()
-    generateDocumentCNPJ.generatedCNPJs.append(cnpj)    
+    documentosCadastrados.add(cnpj)
     return cnpj
-generateDocumentCNPJ.generatedCNPJs = []
 
 def generate_status():
     return random.choice(status)
 
+
 def generate_tipoCadastro():
     return random.choice(tipoCadastro)
+
 
 def generate_perfilParceiro():
     return random.choice(perfilParceiro)
 
+
 def generate_documentoIdentificacao(tipoPessoa):
     return checkTipoPessoa(tipoPessoa)
+
 
 def generate_razaoSocial_or_name(tipoPessoa):
     if tipoPessoa == "Pessoa Física" or "Estrangeiro":
         return fake.name()
     if tipoPessoa == "Pessoa Jurídica":
         return fake.company()
+
 
 def generate_nome():
     return fake.name()
